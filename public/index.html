@@ -10,21 +10,22 @@
 <body>
     <h1>Client</h1>
 
-    <!-- library socket server -->
+    <!-- Inclusion of the Socket.IO library for bidirectional communication between client and server -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.5/socket.io.js"
         integrity="sha512-luMnTJZ7oEchNDZAtQhgjomP1eZefnl82ruTH/3Oj/Yu5qYtwL7+dVRccACS/Snp1lFXq188XFipHKYE75IaQQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- connection string to the socket server. socket server path -->
+    <!-- Socket server connection string. Defines the path to the socket server -->
     <script>
         const socket = io('http://localhost:8080');
 
-        // on listen the events of the server
-        // data is the payload of the emit in the server 
+        // Listen for events emitted by the server
+        // 'data' contains the payload sent by the server
         socket.on('server-to-client', (data) => {
             console.log(data);
         });
 
+        // Emit a message to the server after 2 seconds
         setTimeout(() => {
             socket.emit('client-to-server', {
                 msg: 'Hello world from the client',
