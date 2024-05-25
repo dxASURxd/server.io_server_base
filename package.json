@@ -1,0 +1,25 @@
+{
+  "name": "socket.io_base_server",
+  "version": "1.0.0",
+  "description": "socket server initial base ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dxASURxd/server.io_server_base.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dxASURxd/server.io_server_base/issues"
+  },
+  "homepage": "https://github.com/dxASURxd/server.io_server_base#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
